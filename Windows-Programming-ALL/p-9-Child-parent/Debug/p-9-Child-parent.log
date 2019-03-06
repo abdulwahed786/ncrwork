@@ -1,0 +1,4 @@
+﻿  p-9-child.cpp
+c:\users\wahed\documents\visual studio 2015\projects\windows-programming-all\p-9-child-parent\p-9-child.cpp(29): warning C4477: 'printf_s' : format string '%d' requires an argument of type 'int', but variadic argument 1 has type 'HANDLE'
+  p-9-Child-parent.vcxproj -> C:\Users\wahed\documents\visual studio 2015\Projects\Windows-Programming-ALL\Debug\p-9-Child-parent.exe
+  p-9-Child-parent.vcxproj -> C:\Users\wahed\documents\visual studio 2015\Projects\Windows-Programming-ALL\Debug\p-9-Child-parent.pdb (Full PDB)

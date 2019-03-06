@@ -1,0 +1,4 @@
+﻿C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppBuild.targets(392,5): warning MSB8028: The intermediate directory (Debug\) contains files shared from another project (p-14-terminate_thread.vcxproj).  This can lead to incorrect clean and rebuild behavior.
+  15-terminate_thread.cpp
+  p-14-terminate_thread.vcxproj -> C:\Users\wahed\documents\visual studio 2015\Projects\Windows-Programming-ALL\Debug\p-15-terminate_thread.exe
+  p-14-terminate_thread.vcxproj -> C:\Users\wahed\documents\visual studio 2015\Projects\Windows-Programming-ALL\Debug\p-15-terminate_thread.pdb (Full PDB)

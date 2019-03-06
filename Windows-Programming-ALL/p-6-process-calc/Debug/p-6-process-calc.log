@@ -1,0 +1,5 @@
+﻿  Source.cpp
+c:\users\wahed\documents\visual studio 2015\projects\windows-programming-all\p-6-process-calc\source.cpp(30): warning C4477: 'printf_s' : format string '%d' requires an argument of type 'int', but variadic argument 1 has type 'HANDLE'
+c:\users\wahed\documents\visual studio 2015\projects\windows-programming-all\p-6-process-calc\source.cpp(50): warning C4477: 'printf_s' : format string '%d' requires an argument of type 'int', but variadic argument 1 has type 'HANDLE'
+  p-6-process-calc.vcxproj -> C:\Users\wahed\documents\visual studio 2015\Projects\Windows-Programming-ALL\Debug\p-6-process-calc.exe
+  p-6-process-calc.vcxproj -> C:\Users\wahed\documents\visual studio 2015\Projects\Windows-Programming-ALL\Debug\p-6-process-calc.pdb (Full PDB)

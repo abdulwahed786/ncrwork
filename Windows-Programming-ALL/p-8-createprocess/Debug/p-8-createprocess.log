@@ -1,0 +1,4 @@
+﻿  Source.cpp
+c:\users\wahed\documents\visual studio 2015\projects\windows-programming-all\p-8-createprocess\source.cpp(29): warning C4477: 'printf_s' : format string '%d' requires an argument of type 'int', but variadic argument 1 has type 'HANDLE'
+  p-8-createprocess.vcxproj -> C:\Users\wahed\documents\visual studio 2015\Projects\Windows-Programming-ALL\Debug\p-8-createprocess.exe
+  p-8-createprocess.vcxproj -> C:\Users\wahed\documents\visual studio 2015\Projects\Windows-Programming-ALL\Debug\p-8-createprocess.pdb (Full PDB)

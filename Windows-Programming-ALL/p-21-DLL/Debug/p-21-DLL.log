@@ -1,0 +1,9 @@
+﻿C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppBuild.targets(392,5): warning MSB8028: The intermediate directory (Debug\) contains files shared from another project (p-21-DLL.vcxproj).  This can lead to incorrect clean and rebuild behavior.
+  mylib.cpp
+c:\users\wahed\documents\visual studio 2015\projects\windows-programming-all\p-21-dll\mylib.cpp(3): warning C4273: 'add': inconsistent dll linkage
+  c:\users\wahed\documents\visual studio 2015\projects\windows-programming-all\p-21-dll\mylib.h(8): note: see previous definition of 'add'
+c:\users\wahed\documents\visual studio 2015\projects\windows-programming-all\p-21-dll\mylib.cpp(7): warning C4273: 'sub': inconsistent dll linkage
+  c:\users\wahed\documents\visual studio 2015\projects\windows-programming-all\p-21-dll\mylib.h(9): note: see previous definition of 'sub'
+     Creating library C:\Users\wahed\documents\visual studio 2015\Projects\Windows-Programming-ALL\Debug\mylib.lib and object C:\Users\wahed\documents\visual studio 2015\Projects\Windows-Programming-ALL\Debug\mylib.exp
+  p-21-DLL.vcxproj -> C:\Users\wahed\documents\visual studio 2015\Projects\Windows-Programming-ALL\Debug\mylib.dll
+  p-21-DLL.vcxproj -> C:\Users\wahed\documents\visual studio 2015\Projects\Windows-Programming-ALL\Debug\mylib.pdb (Full PDB)

@@ -1,0 +1,8 @@
+﻿  Source.cpp
+c:\users\wahed\documents\visual studio 2015\projects\windows-programming-all\p-3-enviromnentvariables\source.cpp(30): warning C4477: 'wprintf' : format string '%S' requires an argument of type 'char *', but variadic argument 2 has type 'TCHAR *'
+  c:\users\wahed\documents\visual studio 2015\projects\windows-programming-all\p-3-enviromnentvariables\source.cpp(30): note: consider using '%lS' in the format string
+  c:\users\wahed\documents\visual studio 2015\projects\windows-programming-all\p-3-enviromnentvariables\source.cpp(30): note: consider using '%llS' in the format string
+  c:\users\wahed\documents\visual studio 2015\projects\windows-programming-all\p-3-enviromnentvariables\source.cpp(30): note: consider using '%LS' in the format string
+  c:\users\wahed\documents\visual studio 2015\projects\windows-programming-all\p-3-enviromnentvariables\source.cpp(30): note: consider using '%wS' in the format string
+  p-3-enviromnentvariables.vcxproj -> C:\Users\wahed\documents\visual studio 2015\Projects\Windows-Programming-ALL\Debug\p-3-enviromnentvariables.exe
+  p-3-enviromnentvariables.vcxproj -> C:\Users\wahed\documents\visual studio 2015\Projects\Windows-Programming-ALL\Debug\p-3-enviromnentvariables.pdb (Full PDB)

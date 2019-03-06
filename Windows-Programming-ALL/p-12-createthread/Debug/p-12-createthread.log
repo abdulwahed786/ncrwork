@@ -1,0 +1,6 @@
+﻿  p12-threadSource.cpp
+c:\users\wahed\documents\visual studio 2015\projects\windows-programming-all\p-12-createthread\p12-threadsource.cpp(23): warning C4101: 'harray': unreferenced local variable
+c:\users\wahed\documents\visual studio 2015\projects\windows-programming-all\p-12-createthread\p12-threadsource.cpp(21): warning C4101: 'thID2': unreferenced local variable
+c:\users\wahed\documents\visual studio 2015\projects\windows-programming-all\p-12-createthread\p12-threadsource.cpp(22): warning C4101: 'hThread2': unreferenced local variable
+  p-12-createthread.vcxproj -> C:\Users\wahed\documents\visual studio 2015\Projects\Windows-Programming-ALL\Debug\p-12-createthread.exe
+  p-12-createthread.vcxproj -> C:\Users\wahed\documents\visual studio 2015\Projects\Windows-Programming-ALL\Debug\p-12-createthread.pdb (Full PDB)

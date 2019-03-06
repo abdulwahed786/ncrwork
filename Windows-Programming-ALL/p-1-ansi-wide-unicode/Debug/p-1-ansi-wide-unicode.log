@@ -1,0 +1,4 @@
+﻿  Source.cpp
+c:\users\wahed\documents\visual studio 2015\projects\windows-programming-all\p-1-ansi-wide-unicode\source.cpp(9): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+  p-1-ansi-wide-unicode.vcxproj -> C:\Users\wahed\documents\visual studio 2015\Projects\Windows-Programming-ALL\Debug\p-1-ansi-wide-unicode.exe
+  p-1-ansi-wide-unicode.vcxproj -> C:\Users\wahed\documents\visual studio 2015\Projects\Windows-Programming-ALL\Debug\p-1-ansi-wide-unicode.pdb (Full PDB)

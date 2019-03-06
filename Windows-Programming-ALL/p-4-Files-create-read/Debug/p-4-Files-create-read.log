@@ -1,0 +1,6 @@
+﻿  Source.cpp
+c:\users\wahed\documents\visual studio 2015\projects\windows-programming-all\p-4-files-create-read\source.cpp(40): warning C4800: 'BOOL': forcing value to bool 'true' or 'false' (performance warning)
+c:\users\wahed\documents\visual studio 2015\projects\windows-programming-all\p-4-files-create-read\source.cpp(47): warning C4018: '<': signed/unsigned mismatch
+c:\users\wahed\documents\visual studio 2015\projects\windows-programming-all\p-4-files-create-read\source.cpp(43): warning C4477: 'wprintf' : format string '%d' requires an argument of type 'int', but variadic argument 1 has type 'DWORD (__stdcall *)(void)'
+  p-4-Files-create-read.vcxproj -> C:\Users\wahed\documents\visual studio 2015\Projects\Windows-Programming-ALL\Debug\p-4-Files-create-read.exe
+  p-4-Files-create-read.vcxproj -> C:\Users\wahed\documents\visual studio 2015\Projects\Windows-Programming-ALL\Debug\p-4-Files-create-read.pdb (Full PDB)
