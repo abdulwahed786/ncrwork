@@ -2,7 +2,7 @@
 #include<ctype.h>
 using namespace std;
 
-#define STACKSIZE 100
+#define STACKSIZE 200
 
 template <class t>
 class Stk
@@ -81,19 +81,25 @@ public:
 
 };
 
+int pred(char c)
+{
+	if(c=='+' || c=='-')
+		return 1;
+	else if(c=='*' || c=='/')
+		return 2;
+	else
+		return 0;
+}
+
 
 
 int main(int argc, char const *argv[])
 {
-	char del='@'; //delimiter 
-
-	int a; //stack size
+	int a=STACKSIZE;
 	// cout<<"enter the size  of the stack :";
 	// cin>>a;
-	 //or
-	a=STACKSIZE;
 
-	Stk<int> st;
+	Stk<char> st;
 	// st.getsize(a);
 
 	cout<<" Enter the string  : ";
@@ -101,57 +107,78 @@ int main(int argc, char const *argv[])
 	int l=s.length();
 	st.getsize(l);
 
-	int r=0;
+	string r="";
 
-	// int flag=0;//to mark 
+	int flag=0;//to mark 
+	int flagOp=0; //to check if op was before
 	for(int i=0;i<l;i++)
 	{
+
 		char ch=s[i];
 		if(isdigit(ch))
 		{
-			int k=ch-'0';
-			// st.push(ch-'0');
-			while(s[++i]!=del)
+			r+=ch;
+			if(i<l && !isdigit(s[i+1]))
+				r+='@'; //add delimiter
+		}
+		else if(ch== '(' || ch=='{' || ch=='[') //opening 
+		{
+			st.push(ch); //blindly push opeing
+		}
+		else if(ch== ')' || ch=='}' || ch==']')  //closing
+		{
+			char top=st.peek();
+			while(!(top== '(' || top=='{' || top=='['))
 			{
-				k= k*10+(s[i]-'0');
-				// i++;
+				r+=st.pop();
+				top=st.peek();
 			}
-			cout<<"k= "<<k<<" ";
-			st.push(k);
-			i--;
-			continue;
+			st.pop();
 		}
 		else if(ch== '+' || ch=='-' || ch=='*' || ch=='/') //operator
 		{
-			int a,b,c;
-			b=st.pop();
-			a=st.pop();
-			if(ch=='+')
-				c=a+b;
-			else if(ch=='-')
-				c=a-b;
-			else if(ch=='*')
-				c=a*b;
-			else if(ch=='/')
-				c=a/b;
+			int incom=pred(ch);
+			int ptop= pred(st.peek());
+			if(incom>ptop)
+			{
+				st.push(ch);
+			}
+			else
+			{
+				r+=st.pop();
+				ptop= pred(st.peek());
+				while(incom<=ptop)
+					{
+						r+=st.pop();
+						ptop= pred(st.peek());
+					}	
 
-			st.push(c);
+				st.push(ch);
+			}
+			
 		}
-		else if(ch==del)
-			continue;
-		else
+		else //delimiter or other 
 		{
-			// cout<<"invaid input\n";
-			// return 0;
+			// int x;
+			// if(ch==del)
+			// {
+			// 	continue;
+			// }
+			// else
+			// {
+
+			// }
 			// st.push(ch);
 		}
 		
+		
+		cout<<" i= "<<i<<" r="<<r<<endl;
 	}//for loop
 
-	if(st.isEmpty()==0)
-		r= st.pop();
+	while(st.isEmpty()==0)
+		r+=st.pop();
 		
-		cout<<"Postfix exp value : "<<r;
+		cout<<"Postfix exp : "<<r;
 
 	return 0;
 }

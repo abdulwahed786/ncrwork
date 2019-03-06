@@ -1,4 +1,5 @@
 #include <iostream>
+#include<ctype.h>
 using namespace std;
 
 template <class t>
@@ -47,8 +48,8 @@ public:
 		}
 		else
 		{
-			cout<<"satck is empty";
-			return -1;
+			cout<<"pop  stack is empty \n";
+			return (t)0;
 		}
 	}
 	t peek()
@@ -59,8 +60,8 @@ public:
 		}
 		else
 		{
-			cout<<"stack is empty";
-			return (t)255;
+			cout<<"peek stack is empty\n ";
+			return (t)0;
 		}
 	}
 	void display()
@@ -78,13 +79,15 @@ public:
 
 };
 
+
+
 int main(int argc, char const *argv[])
 {
 	int a;
 	cout<<"enter the size  of the stack :";
 	cin>>a;
 
-	Stk<char> st;
+	Stk<int> st;
 	// st.getsize(a);
 
 	cout<<" Enter the string  : ";
@@ -92,63 +95,47 @@ int main(int argc, char const *argv[])
 	int l=s.length();
 	st.getsize(l);
 
-	int flag=0;//to mark 
+	int r=0;
+
+	// int flag=0;//to mark 
 	for(int i=0;i<l;i++)
 	{
-		char c=s[i];
-		switch (c)
+		char ch=s[i];
+		if(isdigit(ch))
 		{
-			case '(':
-			case '{':
-			case '[':
-			 {
-			 	if(!st.isFull())
-			 		st.push(c);
-			    else
-			    {
-			    	flag=1;
-			    	break;
-			    }
-			 }
-			 break;
-
-			 case ')':
-			 case '}':
-			 case ']':
-			   {
-				   	 if(!st.isEmpty())
-				   	 {
-				   	   char tp=st.peek();
-				   	   if( (c== ')' && tp=='(' ) ||   (c== '}' && tp=='{' )   ||  (c== ']' && tp=='[' )  )
-				   	   {
-				   	 	st.pop();
-				   	   }
-				   	   else
-				   	  {
-				   	 	flag=1;
-				   	 	break;
-				   	   }
-
-				   	 }//if
-				   	 else
-				   	 {
-				   	 	flag=1;
-				   	 	break;
-				   	 }
-
-			   }
-			   default:
-			   flag=1;
-			   break;
-
+			st.push(ch-'0');
 		}
-		if(flag==1)
+		else if(ch== '+' || ch=='-' || ch=='*' || ch=='/') //operator
 		{
-			cout<<"unbalanced paranthesis \n";
+			int a,b,c;
+			b=st.pop();
+			a=st.pop();
+			if(ch=='+')
+				c=a+b;
+			else if(ch=='+')
+				c=a+b;
+			else if(ch=='-')
+				c=a-b;
+			else if(ch=='*')
+				c=a*b;
+			else if(ch=='/')
+				c=a/b;
+
+			st.push(c);
+		}
+		else
+		{
+			cout<<"invaid input\n";
 			return 0;
+			// st.push(ch);
 		}
+		
 	}//for loop
-		cout<<" String is Balanced \n";
+
+	if(st.isEmpty()==0)
+		r= st.pop();
+		
+		cout<<"Postfix exp value : "<<r;
 
 	return 0;
 }

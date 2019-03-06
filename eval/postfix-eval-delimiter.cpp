@@ -2,7 +2,7 @@
 #include<ctype.h>
 using namespace std;
 
-#define STACKSIZE 100
+#define STACKSIZE 200
 
 template <class t>
 class Stk

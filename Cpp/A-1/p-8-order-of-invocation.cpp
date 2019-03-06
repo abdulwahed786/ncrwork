@@ -7,7 +7,6 @@ class Emp
 	//public section
 	public:
 		
-
 		Emp()//default constructor
 		{
 			cout<<"In default constructor"<<endl;
@@ -51,8 +50,7 @@ class Emp
 		}
 };
 // void func()// function to see active objects and deleted objects after the execution of function
-// {
-	
+// {	
 // }
 int main()
 {

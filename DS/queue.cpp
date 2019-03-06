@@ -2,22 +2,23 @@
 using namespace std;
 
 template<class T>
-class CQueue{
+class Queue{
 	int r;
 	int f;
 	int size;
-	T *cq;
+	T *q;
 public:
-	CQueue()
+	Queue()
 	{
 		r=f=-1;
 		size=0;
-		cq=NULL;
+		q=NULL;
 	}
-	CQueue(int n){
+	Queue(int n)
+	{
 		size=n;
 		r=f=-1;
-		cq= new T[n];
+		q= new T[n];
 	}
 	void Enqueue(T ele)
 	{
@@ -25,13 +26,12 @@ public:
 		{
 			if(isUnderFlow())
 			{
-			r=r+1;
-			f=f+1;
-			cq[r]=ele;
+				r=r+1;
+				f=f+1;
+				q[r]=ele;
 			}
 			else{
-				r=(r+1)%size;
-				cq[r]=ele;
+				q[++r]=ele;
 			}
 		}
 		else{
@@ -41,17 +41,13 @@ public:
 	T Dequeue()
 	{
 		T x=(T)-99;
-		if(!isUnderFlow())
-		{
-			if(f==r)
-			{
-				x=cq[f];
+		if(!isUnderFlow()){
+			if(f==r){
+				x=q[f];
 				f=r=-1;
 			}
-			else
-			{	
-				x=cq[f];
-				f=(f+1)%size;
+			else{
+				x=q[f++];
 			}
 			return x;
 		}
@@ -68,25 +64,34 @@ public:
 	}
 	bool isOverFlow()
 	{
-		return (f==((r+1)%size));
+		return (r==(size-1));
 	}
 	void display()
 	{
 		int i;
-		for(i=f;i!=r;i=(i+1)%size){
-			cout<<cq[i]<<" ";
+		if(!isUnderFlow()){
+			for(i=f;i<=r;i++){
+			cout<<q[i]<<" ";
+			}	
 		}
-		cout<<cq[i]<<endl;
+		else{
+			cout<<"Empty\n";
+		}
+		
+		
 	}
-	~CQueue(){
-		delete cq;
+	~Queue()
+	{
+		delete q;
 	}
 };
-int main(){
+
+int main()
+{
 	int n;
 	cout<<"Enter the size:";
 	cin>>n;
-	CQueue<int> cque(n);
+	Queue<int> que(n);
 	while(1){
 		cout<<"Enter the option \n1)Enqueue\n2)Dequeue\n3)isUnderFlow\n4)isOverFlow\n5)display\n6)Exit\n";
 		int ch,ele;
@@ -94,27 +99,27 @@ int main(){
 		switch(ch){
 			case 1:
 				cin>>ele;
-				cque.Enqueue(ele);
+				que.Enqueue(ele);
 				break;
 			case 2:
-				ele=cque.Dequeue();
+				ele=que.Dequeue();
 				if(ele!=-99)
 				cout<<ele<<" is the popped element";
 				break;
 			case 3:
-				if(cque.isUnderFlow())
+				if(que.isUnderFlow())
 					cout<<"Empty\n";
 				else
 					cout<<"Not Empty\n";
 				break;
 			case 4:
-				if(cque.isOverFlow())
+				if(que.isOverFlow())
 					cout<<"Full\n";
 				else
 					cout<<"Not Full\n";
 				break;
 			case 5:
-				cque.display();
+				que.display();
 				break;
 			case 6:
 				return 0;
