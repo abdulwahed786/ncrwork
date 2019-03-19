@@ -38,9 +38,10 @@ public:
 			C.vec[i].resize(cols);
 		}
 		int c;
-		for(int i=0;i<rows;i++){
+		for(int i=0;i<rows;i++){ //for matrix M1 -rows
 
-			for(int k=0;k<cols;k++){
+			for(int k=0;k<cols;k++) //for other matrix M2 -columns
+			{
 				c=0;
 				for(int j=0;j<A.vec[0].size();j++){
 					c+=A.vec[i][j]*B.vec[j][k];

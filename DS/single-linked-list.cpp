@@ -57,7 +57,6 @@ public:
 				temp->next=curr->next;
 				curr->next=temp;
 			}
-
 		}
 		else
 		{

@@ -82,6 +82,7 @@ public:
 		delete cq;
 	}
 };
+
 int main(){
 	int n;
 	cout<<"Enter the size:";

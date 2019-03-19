@@ -1,0 +1,127 @@
+<html>
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  </head>
+
+  <body>
+  	<center>
+  		<h1> Jqurey assignment 1 - address </h1>
+  		<br><br>
+
+	    <div class="container">
+	    <b>Temporary address:</b>
+	    <!-- <input type="text" place holder="enter the address" id="addr"/> -->
+	    </div>
+
+	    <br><br>
+
+			     House No :<br>
+		  <input type="text" name="House_No" value="22-7-433/2" id='hno'>
+		  <br>
+		  
+		  Locality :<br>
+		  <input type="text" name="Locality" value="charminar" id='loc'>
+		  <br>
+		  
+		  Mandal : <br>
+		   <select name="Mandal" value="charminar" id='mandal'>
+		   	<option>bahadurpura</option>
+		   	<option>charminar</option>
+		   	<option>karwan</option>
+		   	<option>chandrangutta</option>
+		   </select>
+
+		  <br>
+
+		  State : <br>
+		   <select name="State" value="Telanagana" id='state'>
+		   	<option>Telanagana</option>
+		   	<option>Kerala</option>
+		   	<option>west bengal</option>
+		   	<option>AP</option>
+		   </select>
+
+		  <br>
+		  
+		  
+		  Pin code : <br>
+		  <input type="text" name="PinCode" value="500002" id='pin'>
+		  <br><br>
+		  
+
+	    <div>
+	      <input type="checkbox" name="vehicle1" value="addresss" id="check"/> is temporary address same as permanent address?<br>
+	    </div>
+	    
+	    <br><br><br><br>
+
+	    <div>
+	    <b>permanent address:</b>
+	    <!-- <input type="text" id="permanent"/> -->
+	    </div>
+
+	    <br><br>
+	    	     House No :<br>
+		  <input type="text" name="House_No" value="--" id='hno2'>
+		  <br>
+		  
+		  Locality :<br>
+		  <input type="text" name="Locality" value="--" id='loc2'>
+		  <br>
+		  
+		  Mandal : <br>
+		   <select name="Mandal" value="--" id='mandal2'>
+		   	<option>bahadurpura</option>
+		   	<option>charminar</option>
+		   	<option>karwan</option>
+		   	<option>chandrangutta</option>
+		   </select>
+
+		  <br>
+
+		  State : <br>
+		   <select name="State" value="--" id='state2'>
+		   	<option>Telanagana</option>
+		   	<option>Kerala</option>
+		   	<option>west bengal</option>
+		   	<option>AP</option>
+		   </select>
+
+		  <br>
+		  
+		  
+		  Pin code : <br>
+		  <input type="text" name="PinCode" value="--" id='pin2'>
+		  <br><br>
+		  
+	    
+   </center>
+    <script>
+      $(document).ready(function()
+      {
+        $("#check").click( function()
+	        {
+	          if(this.checked==true)
+	          {
+	            $("#hno2").val($("#hno").val());
+	            $("#loc2").val($("#loc").val());
+	            $("#mandal2").val($("#mandal").val());
+	            $("#state2").val($("#state").val());
+	            $("#pin2").val($("#pin").val());
+
+	          }
+	          else
+	          {
+	            // $("#permanent").val("");
+	            $("#hno2").val("");
+	            $("#loc2").val("");
+	            $("#mandal2").val("");
+	            $("#state2").val("");
+	            $("#pin2").val("");
+	          }
+          
+           });
+      });
+    </script>
+  </body>
+</html>

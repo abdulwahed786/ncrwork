@@ -1,0 +1,32 @@
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>val demo</title>
+  <style>
+    h3 {
+      color: blue;
+      margin: 8px;
+    }
+  </style>
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+</head>
+<body>
+ <center>
+  <br><br><br>
+   <input type="text" value="type something here" id='in'>
+   <br><br>
+    <h3></h3>
+ </center>
+
+ 
+<script>
+$( "#in" )
+  .keyup(function() {
+    var value = $( this ).val();
+    $( "h3" ).text( value );
+  })
+  .keyup();
+</script>
+ 
+</body>
+</html>

@@ -52,14 +52,14 @@ complex complex::operator-()
 {
 	return complex(-real,-imag);
 }
-complex complex::operator++()
+complex complex::operator++() //prefix  ++c
 {
 	complex res;
 	res.real=++real;
 	res.imag=++imag;
 	return res;
 }
-complex complex::operator++(int x)
+complex complex::operator++(int x)  //postfix c++
 {
 	complex res;
 	res.real=real;
@@ -106,12 +106,14 @@ int main()
 	{
 		cin>>arr[i];
 	}
+
 	for(int i=0;i<3;i++)
 		cout<<arr[i];
+
 	ptr=&arr[0];
-	a1=arr[0]+arr[1];
-	a2=-arr[1];
-	a3=arr[0];
+	a1=arr[0]+arr[1];  cout<<"a1="<<a1<<endl;
+	a2=-arr[1];   cout<<"a2="<<a2<<endl;
+	a3=arr[0];  cout<<"a3="<<a3<<endl;
 	//a3=arr[0]++;
 	a4=++arr[1];
 	cout<<endl;

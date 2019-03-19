@@ -45,7 +45,7 @@ distance1 sum1(distance1 &d1,distance2 &d2)
 {
 	distance1 temp;
 	int val=0;
-	val+=(d1.dis_m)*100+d1.dis_cm;
+	val+=(d1.dis_m)*100+d1.dis_cm;   //converting all to cms
 	val+=(d2.dis_feet)*30.48+(d2.dis_inch)*2.54;
 	cout<<val<<endl;
 	temp.dis_m=val/100;
@@ -56,7 +56,7 @@ distance2 sum2(distance1 &d1,distance2 &d2)
 {
 	distance2 temp;
 	int val=0;
-	val+=(d2.dis_feet)*12+d2.dis_inch;
+	val+=(d2.dis_feet)*12+d2.dis_inch;   //coverting all to inches
 	val+=(d1.dis_m)*39.37+(d1.dis_cm)*0.39;
 	cout<<val<<endl;
 	temp.dis_feet=val/12;

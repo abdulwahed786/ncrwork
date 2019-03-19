@@ -1,6 +1,7 @@
 #include <iostream>
 using namespace std;
 
+
 class Stk
 {
   int top;
@@ -13,7 +14,7 @@ public:
 		size=0;
 		s=NULL;
 	}
-	void getsize(int x)
+	void setsize(int x)
 	{
 		size=x;
 		s=new int[x];
@@ -46,7 +47,7 @@ public:
 		}
 		else
 		{
-			cout<<"satck is empty";
+			cout<<"stack is empty";
 			return -99999;
 		}
 	}
@@ -58,7 +59,7 @@ public:
 		}
 		else
 		{
-			cout<<"satck is empty";
+			cout<<"stack is empty";
 			return -99999;
 		}
 	}
@@ -86,7 +87,7 @@ int main(int argc, char const *argv[])
 	cin>>a;
 
 	Stk st;
-	st.getsize(a);
+	st.setsize(a);
 
 	st.push(10);
 	st.push(20);

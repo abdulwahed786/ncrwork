@@ -1,3 +1,12 @@
+// Create a class called Time that has separate int data members for hours, minute, and
+// seconds. One constructor should initialize the data to 0, and another should
+// initialize it to fixed values. A member function should display it in 11:43:34 format.
+// Another member function should add two objects of type Time passed as
+// arguments. A main() program should create two initialized Time object and one that
+// isn't initialized. Then it should add the two initialized values together, leaving the
+// result in the third time variable. Finally, it should display the value of this third
+// variable.
+
 #include<iostream>
 #include<cstring>
 using namespace std;

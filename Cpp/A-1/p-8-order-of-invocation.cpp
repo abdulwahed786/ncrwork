@@ -31,7 +31,8 @@ class Emp
 			x=b.x;
 			y=b.y;
 			//string str;
-			name=b.name;
+			// name=b.name;
+			strcpy(name,b.name);
 		}
 		friend void display_byval(Emp e){// call by value;
 			cout<<"Call by value " ;

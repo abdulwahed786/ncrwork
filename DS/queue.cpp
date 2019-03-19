@@ -20,6 +20,7 @@ public:
 		r=f=-1;
 		q= new T[n];
 	}
+
 	void Enqueue(T ele)
 	{
 		if(!isOverFlow())
@@ -38,6 +39,7 @@ public:
 			cout<<"Queue is Full\n";
 		}		
 	}
+
 	T Dequeue()
 	{
 		T x=(T)-99;
@@ -56,16 +58,19 @@ public:
 			return x;
 		}
 	}
+
 	bool isUnderFlow()
 	{
 		if(r==f && r==-1)
 			return true;
 		return false;
 	}
+
 	bool isOverFlow()
 	{
 		return (r==(size-1));
 	}
+	
 	void display()
 	{
 		int i;

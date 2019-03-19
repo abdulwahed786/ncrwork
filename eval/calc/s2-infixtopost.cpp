@@ -1,5 +1,4 @@
 // #include "stack.h"
-
 int pred(char c)
 {
 	if(c=='+'||c=='-')
@@ -19,7 +18,6 @@ extern string infixtopost(string s)
 	Stk<char> st;
 	// st.getsize(a);
 
-
 	// cout<<" Enter the string  : ";
 	// string s; cin>>s;
 	int l=s.length();
@@ -31,7 +29,6 @@ extern string infixtopost(string s)
 	int flagOp=0; //to check if op was before
 	for(int i=0;i<l;i++)
 	{
-
 		char ch=s[i];
 		if(isdigit(ch))
 		{
